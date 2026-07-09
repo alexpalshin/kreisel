@@ -15,17 +15,10 @@
 !/mu-plugins/
 !/mu-plugins/*
 
-
-# Configuration
-wp-config.php
-
-# Example themes
-
 # Log files
 *.log
 
 # htaccess
 /.htaccess
-
 
 !/.gitignore
