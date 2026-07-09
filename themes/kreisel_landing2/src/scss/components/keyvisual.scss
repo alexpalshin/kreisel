@@ -1,0 +1,129 @@
+//---------------------------------------------
+//
+//  Slider Component
+//
+//    1. Imports
+//    2. Component
+//
+//---------------------------------------------
+
+//---------------------------------------------
+// 1. Imports
+//---------------------------------------------
+
+@import "../variables";
+
+//---------------------------------------------
+// 2. Component
+//---------------------------------------------
+
+.key-visual {position:relative;}
+.key-visual-container {width:100%;height:auto;max-height:660px;overflow:hidden;position:relative;margin-top:0;margin-bottom:-50px;}
+.key-visual-container img {width: 100%;height: 100%;object-fit: cover;}
+.key-visual-textcontainer {position:absolute;top:0;left:0;display:flex;justify-content: center;align-items: center;width:100%;height:100%;}
+.key-visual-textcontainer .textbox {background-color: $bg-brandcolor_90;}
+.key-visual-textcontainer .textbox h1 {font-size:2.875rem;color:$white;font-weight:$leicht;margin-bottom:18px;}
+.key-visual-textcontainer .textbox p,
+.key-visual-textcontainer .textbox .p{
+	letter-spacing: .05rem;
+	font-weight: 300;
+	font-size: 1.438rem;
+	color:$white;
+	margin-bottom:22px
+}
+
+.key-visual_border-headline {
+	position:relative;
+	margin: 25px auto 100px;
+	padding: 18px 10px;
+	width: 75%;
+	max-width: 1100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background-color: $bg-brandcolor_90;
+	@media (min-width:1260px) {padding: 28px 10px;}
+}
+
+.key-visual_border-headline h1 {
+	color:$white;
+	font-size:1.625rem;
+	@media (min-width:1260px) {font-size:2.25rem;}
+}
+
+/*MOBILE*/
+
+@media (min-width:320px) {
+	.key-visual-container {width:100%;height:500px;overflow:hidden;position:relative;margin-top:-50px};
+	.key-visual-textcontainer {padding-top:60px;}
+	.key-visual-textcontainer .textbox .btn {font-size: 1.0rem;padding: 0.5rem 1.813rem;}
+	.key-visual-textcontainer .textbox h1 {font-size:24px;}
+	.key-visual-textcontainer .textbox {padding: 20px 10px; width: 85%;text-align: center;}
+}
+
+@media (min-width:420px) {
+	.key-visual-textcontainer {padding-top:120px;}
+}
+
+@media (min-width:576px) {
+	.key-visual-textcontainer {padding-top:130px;}
+}
+
+@media (min-width:768px) {
+	.key-visual-textcontainer .textbox {max-width: 400px;margin-right: -25%;}
+	.key-visual-textcontainer .textbox.right {margin-right: -25%;}
+	.key-visual-textcontainer .textbox.left {margin-left: -50%;}
+	.key-visual-textcontainer .textbox.center {margin: 0 auto;}
+	
+}
+
+@media (min-width:992px) {
+	.key-visual-textcontainer .textbox {max-width: 530px;}
+}
+
+@media (min-width:1024px) {
+	.key-visual-container {margin-top:-80px}
+}
+
+@media (min-width:1260px) {
+	.key-visual-container {width:100%;height:auto;max-height:660px;overflow:hidden;position:relative;margin-top:-190px;}
+	.key-visual-textcontainer .textbox h1 {font-size:2.875rem;}
+	.key-visual-textcontainer .textbox {padding: 25px 35px 35px; width: 75%;text-align: left;}
+	.key-visual-textcontainer .textbox .btn {font-size: 1.25rem;padding: 0.5rem 3.35rem;}
+}
+
+
+/*----ICON CONTAINER----*/
+
+.icon-container {margin-top:25px;position:relative;z-index:999;}
+.icon-container .icon-element {display: flex;flex-direction: column;}
+.icon-container a.iconlink {display:flex;justify-content:center;}
+.icon-container a.iconlink::after {content: none}
+.icon-container .iconimage-container {background-color: $bg-brandcolor_90;display:flex; justify-content:center;align-items: center;align-self: center;border-radius: 100%;margin-bottom: 5px;width: 55px; height: 55px;
+	@media (min-width:576px)  {width: 65px; height: 65px; }
+	@media (min-width:1260px) {width: 90px; height: 90px;}
+
+}
+.icon-container .iconimage-container .iconimage {width:60%;height:auto;}
+.icon-container .icon-textcontainer {display: flex; flex-direction: column;flex-grow: 1;}
+
+.icon-element .icon-textcontainer h4 {font-size:1rem;font-weight:500;text-align:center;
+	@media (min-width:576px) {font-size:1.125rem;font-weight:500;text-align:center;}
+	@media (min-width:1260px) {font-size:1.438rem;font-weight:300;text-align:left}
+}
+
+.icon-element .icon-textcontainer .icon-text {display:none;
+	@media (min-width:1260px) {display:block;}
+}
+
+.text-icon {display:flex;align-items: initial;
+	@media (max-width: 768px) {margin-bottom:15px;}
+}
+.text-icon p {hyphens:none;
+	@media (max-width: 768px) {margin-bottom:0}
+}
+.text-icon img {margin-right:15px;}
+
+
+/*----ICON CONTAINER END----*/

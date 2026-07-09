@@ -1,0 +1,41 @@
+.btn {
+  font-weight: 500; }
+
+.btn-check:focus + .btn, .btn:focus {
+  box-shadow: none; }
+
+.btn-green {
+  color: #FFF;
+  background-color: #6c0;
+  border-color: #6c0; }
+
+a.btn-green:hover, a.btn-blue:hover {
+  text-decoration: none; }
+
+a.btn-green:hover {
+  color: #6c0; }
+
+a.btn-blue:hover {
+  color: #009de0; }
+
+.btn-green:hover {
+  color: #6c0;
+  background-color: #FFF;
+  border-color: #6c0; }
+
+.btn-blue {
+  color: #fff;
+  background-color: #009de0;
+  border-color: #009de0; }
+
+.btn-blue:hover, .btn-blue.show, .btn-blue.selected {
+  color: #009de0;
+  background-color: #FFF;
+  border-color: #009de0; }
+
+.btn.btn-green::after, .btn.btn-blue::after {
+  content: none; }
+
+.component-container-footer .btn {
+  padding: 0.813rem 3.75rem;
+  font-size: 1.125rem; }

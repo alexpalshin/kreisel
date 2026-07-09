@@ -1,0 +1,191 @@
+//---------------------------------------------
+//
+//  Slider Component
+//
+//    1. Imports
+//    2. Component
+//
+//---------------------------------------------
+
+//---------------------------------------------
+// 1. Imports
+//---------------------------------------------
+
+@import "../variables";
+
+//---------------------------------------------
+// 2. Component
+//---------------------------------------------
+
+/*----HINTERGRUND-VERLAUF----*/
+.bg-white,.bg-white-right,.bg-white-left {background-color:$white;}
+.bg-gray,.bg-gray-right,.bg-gray-left {background-color:$gray;}
+.bg-darkgray,.bg-darkgray-right,.bg-darkgray-left {background-color:$darkgray;}
+
+.component-container .bg-container-inner {position:relative; z-index:1}
+.component-container.bg-gray-right,
+.component-container.bg-darkgray-right {padding-bottom: 50px;padding-top: 50px;}
+.component-container.bg-gray-left,
+.component-container.bg-darkgray-left {padding-bottom: 50px;padding-top: 50px;}
+
+.component-container.bg-gray-right .content-container,
+.component-container.bg-darkgray-right .content-container {position:relative;z-index:99}
+.component-container.bg-gray-left .content-container,
+.component-container.bg-darkgray-left .content-container {position:relative;z-index:99}
+
+.component-container.bg-gray-right .bg-image-right,
+.component-container.bg-darkgray-right .bg-image-right {
+	width: 25%;
+	left: auto;
+	right: 0; 
+	max-width: 500px;
+	position: absolute;
+	height: 100%;
+	overflow: hidden;top: 0;
+	
+@media(max-width:767px) {
+	position:absolute;
+	max-width:100%;
+	width:100%;
+	height:270px;
+  	top:0;
+  	left:0;
+  	transform:none;
+	}
+}
+.component-container.bg-gray-left .bg-image-left,
+.component-container.bg-darkgray-left .bg-image-left {
+	width: 25%;
+	right: auto;
+	left: 0; 
+	max-width: 500px;
+	position: absolute;
+	height: 100%;
+	overflow: hidden;
+	top: 0;
+	
+@media(max-width:767px) {
+	position:absolute;
+	max-width:100%;
+	width:100%;
+	height:270px;
+  	top:0;
+  	left:0;
+  	transform:none;
+	}
+}
+
+.component-container.bg-gray-right .bg-image-right::before {
+	content: "";
+	background: linear-gradient(90deg,#f7f7f7 10%,hsla(0,0%,100%,0) 60%);
+	z-index:1;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	
+@media(max-width:767px) {
+	background:linear-gradient(0deg,#f7f7f7 calc(100% - 270px),hsla(0,0%,100%,0));
+  	content:"";
+  	position:absolute;
+  	right:0;
+  	top:0;
+  	bottom:0;
+  	left:0;
+  	z-index:1
+	}
+}
+.component-container.bg-darkgray-right .bg-image-right::before {
+	content: "";
+	background: linear-gradient(90deg,#efeeee 10%,hsla(0,0%,100%,0) 60%);
+	z-index:1;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+
+@media(max-width:767px) {
+	background:linear-gradient(0deg,#efeeee calc(100% - 270px),hsla(0,0%,100%,0));
+  	content:"";
+  	position:absolute;
+  	right:0;
+  	top:0;
+  	bottom:0;
+  	left:0;
+  	z-index:1
+	}
+}
+
+.component-container.bg-gray-left .bg-image-left::before {
+	content: "";
+	background: linear-gradient(270deg,#f7f7f7 10%,hsla(0,0%,100%,0) 60%);
+	z-index:1;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	
+	@media(max-width:767px) {
+	background:linear-gradient(0deg,#f7f7f7 calc(100% - 270px),hsla(0,0%,100%,0));
+  	content:"";
+  	position:absolute;
+  	right:0;
+  	top:0;
+  	bottom:0;
+  	left:0;
+  	z-index:1
+	}
+}
+.component-container.bg-darkgray-left .bg-image-left::before {
+	content: "";
+	background: linear-gradient(270deg,#efeeee 10%,hsla(0,0%,100%,0) 60%);
+	z-index:1;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+
+	@media(max-width:767px) {
+	background:linear-gradient(0deg,#efeeee calc(100% - 270px),hsla(0,0%,100%,0));
+  	content:"";
+  	position:absolute;
+  	right:0;
+  	top:0;
+  	bottom:0;
+  	left:0;
+  	z-index:1
+	}
+}
+
+.component-container.bg-darkgray-right .bg-image-right img,
+.component-container.bg-gray-right .bg-image-right img
+{width: 100%;height: 100%;object-fit: cover;object-position:100% 0;
+	@media(max-width:767px) {opacity: 0.85}
+}
+.component-container.bg-darkgray-left .bg-image-left img,
+.component-container.bg-gray-left .bg-image-left img
+{width: 100%;height: 100%;object-fit: cover;object-position:initial;
+	@media(max-width:767px) {opacity: 0.85}
+}
+
+.component-container.bg-white-right {padding-bottom: 50px;padding-top: 50px;}
+.component-container.bg-white-left {padding-bottom: 50px;padding-top: 50px;}
+
+.component-container.bg-white-right .content-container {position:relative;z-index:99}
+.component-container.bg-white-left .content-container {position:relative;z-index:99}
+
+.component-container.bg-white-right .bg-image-right {width: 100%;left: auto;right: 0; position: absolute;height: 100%;overflow: hidden;top: 0;}
+.component-container.bg-white-left .bg-image-left {width: 100%;right: auto;left: 0; position: absolute;height: 100%;overflow: hidden;top: 0;}
+
+.component-container.bg-white-right .bg-image-right::before {content: ""; background: linear-gradient(90deg,#fff 33%,hsla(0,0%,100%,0.25));z-index:1;position:absolute;top:0;left:0;width:100%;height:100%;}
+.component-container.bg-white-left .bg-image-left::before {content: ""; background: linear-gradient(270deg,#fff 33%,hsla(0,0%,100%,0.25));z-index:1;position:absolute;top:0;left:0;width:100%;height:100%;}
+
+.component-container.bg-white-right .bg-image-right img {width: 100%;height: 100%;object-fit: cover;object-position:100% 0;}
+.component-container.bg-white-left .bg-image-left img {width: 100%;height: 100%;object-fit: cover;object-position:0 100%;}
+
+.component-container-footer {margin-top:30px;text-align:center;position:relative;z-index:999;}
+/*----HINTERGRUND-VERLAUF ENDE----*/

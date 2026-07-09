@@ -1,0 +1,53 @@
+//---------------------------------------------
+//
+//  Slider Component
+//
+//    1. Imports
+//    2. Component
+//
+//---------------------------------------------
+
+//---------------------------------------------
+// 1. Imports
+//---------------------------------------------
+
+@import "../variables";
+
+//---------------------------------------------
+// 2. Component
+//---------------------------------------------
+
+.btn {font-weight:$halbfett;padding: 0.625rem 0.75rem;}
+.btn-check:focus + .btn,.btn:focus {box-shadow:none;}
+
+.btn-green {
+    color: $white;
+    background-color: $green;
+    border-color: $green;
+}
+
+a.btn-green:hover,a.btn-blue:hover {text-decoration:none;}
+a.btn-green:hover {color:$green;}
+a.btn-blue:hover {color:$brandcolor;}
+
+.btn-green:hover {
+    color: $green;
+    background-color: $white;
+    border-color: $green;	
+}
+
+.btn-blue {
+    color: #fff;
+    background-color: $brandcolor;
+    border-color: $brandcolor;
+}
+
+.btn-blue:hover,.btn-blue.show,.btn-blue.selected {
+    color: $brandcolor;
+    background-color: $white;
+    border-color: $brandcolor;
+}
+
+.btn.btn-green::after,.btn.btn-blue::after {content:none;}
+
+.component-container-footer .btn {padding:0.813rem 3.75rem; font-size:1.125rem; }

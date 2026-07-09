@@ -1,0 +1,105 @@
+//---------------------------------------------
+//
+//  Slider Component
+//
+//    1. Imports
+//    2. Component
+//
+//---------------------------------------------
+
+//---------------------------------------------
+// 1. Imports
+//---------------------------------------------
+
+@import "../variables";
+
+//---------------------------------------------
+// 2. Component
+//---------------------------------------------
+
+.teaserUeberUns-component-container{
+	display:flex;
+}
+
+.teaserUeberUns-Bild{
+	margin-bottom: 20px;
+	flex: 1;
+}
+
+.teaserUeberUns-Bild img{
+	margin-right: 2.5em;
+	width:100%;
+}
+
+.teaserUeberUns-text{
+	width:100%;
+	
+	@media screen and (min-width: 992px){
+		font-size: 18px;}
+}
+
+.ce-gallery, .ce-image, .ce-nowrap .ce-bodytext, .ce-row, .ce-textpic, .ce-uploads div, .ce-uploads li {
+    overflow: hidden;
+}
+
+.ce-gallery {
+    text-align: center;
+}
+
+.ce-intext.ce-left .ce-gallery {
+	margin-bottom:1.875rem;
+	
+	@media(min-width:576px) {
+  	margin-bottom:0.281rem;
+  	margin-right:2rem;
+ }
+	@media(min-width:768px) {
+  	margin-right:2.813rem;
+ }
+}
+
+.ce-intext.ce-right .ce-gallery {
+	margin-bottom:1.875rem;
+	
+	@media(min-width:576px) {
+  	margin-bottom:0.281rem;
+  	margin-left:2rem;
+ }
+	@media(min-width:768px) {
+  	margin-left:2.813rem;
+ }
+}
+
+@media(min-width:576px) {
+ .ce-intext .ce-gallery {
+  max-width:40%
+ }
+}
+@media(min-width:768px) {
+ .ce-intext .ce-gallery {
+  max-width:300px
+ }
+}
+@media(min-width:992px) {
+ .ce-intext .ce-gallery {
+  max-width:30%
+ }
+}
+
+.ce-gallery figure, .ce-gallery img {
+    width: 100%;
+}
+
+.ce-gallery img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #1c3c4a;
+    margin-top: 15px;
+}
+

@@ -1,0 +1,84 @@
+// Scss Document
+
+.searchbar-container-hell{
+	background-color: $white;
+}
+
+.searchbar-container-dunkel{
+	color:$white;
+	background-color: $brandcolor;
+}
+
+.searchbar-content-container{
+	padding-top:20px;
+	padding-bottom:20px;
+}
+
+.searchbar-input-group{
+	align-items: center;
+	justify-content: center;
+	display:flex;
+	flex-direction:column;
+	
+	@media screen and (min-width:768px){
+	flex-direction:row}
+}
+
+.searchbar-input-group.active .search-icon{
+	display:none;
+}
+
+.searchbar-input-group .close-icon{
+	display:none;
+}
+
+.searchbar-input-group.active .close-icon{
+	display:block;
+}
+
+.search-input{
+	display:flex;
+	align-items:center;
+	padding-right:1px;
+	background-color:$white;
+	border-radius: 4px;
+	border-right:1px solid $brandcolor;
+	border-top:1px solid $brandcolor;
+	border-bottom:1px solid $brandcolor;
+	font-size: 0;
+}
+
+.search-title{
+	margin-right:15px;
+	font-size: 22px;
+	margin-top:auto;
+	margin-bottom:10px;
+	white-space: nowrap;
+	
+	@media screen and (min-width:768px){
+	margin-bottom:auto}
+}
+
+.searchbarform-input{
+	border-left:1px solid $brandcolor;
+	border-top:1px solid $brandcolor;
+	border-bottom:1px solid $brandcolor;
+	border-right:none;
+	border-radius: 4px;
+	font-size:18px;
+	font-weight: $leicht;
+	max-width: initial;
+	width:100%;
+	padding-top:15px;
+	padding-bottom:15px;
+}
+
+.svg-close-icon{
+	fill: $brandcolor;
+	width:25px;
+}
+
+.svg-search-icon{
+	fill: $brandcolor;
+	width:25px;
+}

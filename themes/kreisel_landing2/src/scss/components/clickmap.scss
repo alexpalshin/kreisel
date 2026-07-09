@@ -1,0 +1,756 @@
+//---------------------------------------------
+//
+//  Slider Component
+//
+//    1. Imports
+//    2. Component
+//
+//---------------------------------------------
+
+//---------------------------------------------
+// 1. Imports
+//---------------------------------------------
+
+@import "../variables";
+
+//---------------------------------------------
+// 2. Component
+//---------------------------------------------
+
+/*----CLICKMAP----*/
+.clickmap {text-align: center}
+.clickmap-description {margin:0 auto 20px;}
+.clickmap-description .clickmap-description-visible {display:none;}
+.clickmap-description .clickmap-description-hidden {display:block;}
+.clickmap .clickmap-image {position: relative;max-width: 100%;display: none;}
+
+.clickmap .clickmap-items .clickmap-item {
+    position: absolute;
+    display: -ms-flexbox;
+    display: flex;
+    top: 0;
+    left: 0;
+    background-color: hsla(0,0%,100%,.8);
+    transition: background-color .1s ease-in-out;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0 0 25px 0 rgba(0,0,0,.08)
+}
+
+@media(min-width: 1260px) {
+    .clickmap .clickmap-items .clickmap-item {
+        border-top-left-radius:24px;
+        border-bottom-left-radius: 24px
+    }
+}
+
+.clickmap .clickmap-items .clickmap-item:hover {
+    background-color: #fff!important;
+    cursor: pointer
+}
+
+.clickmap .clickmap-items .clickmap-item.animate {
+    overflow: hidden
+}
+
+.clickmap .clickmap-items .clickmap-item.animate .clickmap-item-content-inner {
+    animation: close-inner-content 2s forwards
+}
+
+.clickmap .clickmap-items .clickmap-item.animate.open {
+    background-color: #fff
+}
+
+.clickmap .clickmap-items .clickmap-item.animate.open .clickmap-item-toggle {
+    transform: rotate(45deg)
+}
+
+.clickmap .clickmap-items .clickmap-item.animate.open .clickmap-item-content-inner {
+    animation: open-inner-content 2s forwards
+}
+
+.clickmap .clickmap-items .clickmap-item-toggle {
+    position: relative;
+    background-color: $brandcolor;
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+    min-width: 30px;
+    margin: 4px;
+    transition: transform .3s ease-in-out
+}
+
+@media(min-width: 1260px) {
+    .clickmap .clickmap-items .clickmap-item-toggle {
+        height:40px;
+        width: 40px;
+        min-width: 40px
+    }
+}
+
+.clickmap .clickmap-items .clickmap-item-toggle:after,
+.clickmap .clickmap-items .clickmap-item-toggle:before {
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: block
+}
+
+.clickmap .clickmap-items .clickmap-item-toggle:before {
+    width: 4px;
+    height: 50%
+}
+
+.clickmap .clickmap-items .clickmap-item-toggle:after {
+    width: 50%;
+    height: 4px
+}
+
+.clickmap .clickmap-items .clickmap-item-content {
+    padding: 6px 15px 6px 5px;
+    max-width: 300px;
+    width: 100%;
+    text-align: left;
+    line-height: 1.4;
+	font-size:1.125rem;
+}
+
+@media(min-width: 1260px) {
+    .clickmap .clickmap-items .clickmap-item-content {
+        padding:10px 15px 10px 5px;
+        max-width: 350px
+    }
+}
+
+.clickmap .clickmap-items .clickmap-item-content .clickmap-item-text {
+    padding-top: 5px;
+    margin-bottom: 15px;
+    max-height: 130px;
+    overflow-y: auto;
+}
+
+.clickmap .clickmap-items .clickmap-item-content .clickmap-item-content-inner {
+    opacity: 0;
+    max-height: 0;
+    max-width: 100%;
+    width: 0
+}
+
+
+.clickmap .clickmap-items .clickmap-item-content .clickmap-item-links {
+    font-size: 18px;
+    letter-spacing: .03em;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex
+}
+
+/*.clickmap .clickmap-items .clickmap-item-content .clickmap-item-links .button {
+    padding: 5px 20px;
+    letter-spacing: .045em;
+    font-size: 16px
+}*/
+
+
+.clickmap .clickmap-items .clickmap-item.top-right {
+    -ms-flex-align: end;
+    align-items: flex-end;
+    top: auto
+}
+
+.clickmap .clickmap-items .clickmap-item.bottom-left,
+.clickmap .clickmap-items .clickmap-item.top-left {
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    left: auto;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px
+}
+
+@media(min-width: 1260px) {
+    .clickmap .clickmap-items .clickmap-item.bottom-left,
+    .clickmap .clickmap-items .clickmap-item.top-left {
+        border-top-right-radius:24px;
+        border-bottom-right-radius: 24px
+    }
+}
+
+.clickmap .clickmap-items .clickmap-item.bottom-left .clickmap-item-content,
+.clickmap .clickmap-items .clickmap-item.top-left .clickmap-item-content {
+    padding: 6px 5px 6px 15px;
+    width: auto
+}
+
+@media(min-width: 1260px) {
+    .clickmap .clickmap-items .clickmap-item.bottom-left .clickmap-item-content,
+    .clickmap .clickmap-items .clickmap-item.top-left .clickmap-item-content {
+        padding:10px 5px 10px 15px;
+    }
+}
+
+.clickmap .clickmap-items .clickmap-item.top-left {
+    -ms-flex-align: end;
+    align-items: flex-end;
+    top: auto
+}
+
+@keyframes open-item-bottom-right {
+    0% {
+        min-width: 50px;
+        max-height: 50px;
+        z-index: 1
+    }
+
+    50% {
+        min-width: 350px;
+        max-height: 50px;
+        z-index: 1;
+        border-bottom-left-radius: 20px
+    }
+
+    to {
+        min-width: 350px;
+        max-height: 500px;
+        z-index: 1;
+        border-bottom-left-radius: 0
+    }
+}
+
+@keyframes open-item-bottom-right-lg {
+    0% {
+        min-width: 50px;
+        max-height: 50px;
+        z-index: 1
+    }
+
+    50% {
+        min-width: 350px;
+        max-height: 50px;
+        z-index: 1;
+        border-bottom-left-radius: 24px
+    }
+
+    to {
+        min-width: 350px;
+        max-height: 500px;
+        z-index: 1;
+        border-bottom-left-radius: 0
+    }
+}
+
+@keyframes close-item-bottom-right {
+    0% {
+        min-width: 350px;
+        max-height: 500px;
+        border-bottom-left-radius: 0;
+        background-color: #fff;
+        z-index: 1
+    }
+
+    50% {
+        min-width: 350px;
+        max-height: 50px;
+        border-bottom-left-radius: 20px;
+        background-color: #fff;
+        z-index: 1
+    }
+
+    99% {
+        min-width: 50px;
+        max-height: 50px;
+        border-bottom-left-radius: 20px;
+        background-color: hsla(0,0%,100%,.8);
+        z-index: auto
+    }
+
+    to {
+        min-width: 50px;
+        max-height: 50px;
+        border-bottom-left-radius: 20px;
+        background-color: hsla(0,0%,100%,.8);
+        z-index: auto
+    }
+}
+
+@keyframes close-item-bottom-right-lg {
+    0% {
+        min-width: 350px;
+        max-height: 500px;
+        border-bottom-left-radius: 0;
+        background-color: #fff;
+        z-index: 1
+    }
+
+    50% {
+        min-width: 350px;
+        max-height: 50px;
+        border-bottom-left-radius: 24px;
+        background-color: #fff;
+        z-index: 1
+    }
+
+    99% {
+        min-width: 50px;
+        max-height: 50px;
+        border-bottom-left-radius: 24px;
+        background-color: hsla(0,0%,100%,.8);
+        z-index: auto
+    }
+
+    to {
+        min-width: 50px;
+        max-height: 50px;
+        border-bottom-left-radius: 24px;
+        background-color: hsla(0,0%,100%,.8);
+        z-index: auto
+    }
+}
+
+.clickmap .clickmap-item.bottom-right.animate {
+    animation: close-item-bottom-right 2s forwards
+}
+
+.clickmap .clickmap-item.bottom-right.animate.open {
+    animation: open-item-bottom-right 2s forwards
+}
+
+@media(min-width: 1260px) {
+    .clickmap .clickmap-item.bottom-right.animate.open {
+        animation:open-item-bottom-right-lg 2s forwards
+    }
+}
+
+@keyframes open-item-bottom-left {
+    0% {
+        min-width: 50px;
+        max-height: 50px;
+        z-index: 1
+    }
+
+    50% {
+        min-width: 350px;
+        max-height: 50px;
+        z-index: 1;
+        border-bottom-right-radius: 20px
+    }
+
+    to {
+        min-width: 350px;
+        max-height: 500px;
+        z-index: 1;
+        border-bottom-right-radius: 0
+    }
+}
+
+@keyframes open-item-bottom-left-lg {
+    0% {
+        min-width: 50px;
+        max-height: 50px;
+        z-index: 1
+    }
+
+    50% {
+        min-width: 350px;
+        max-height: 50px;
+        z-index: 1;
+        border-bottom-right-radius: 24px
+    }
+
+    to {
+        min-width: 350px;
+        max-height: 500px;
+        z-index: 1;
+        border-bottom-right-radius: 0
+    }
+}
+
+@keyframes close-item-bottom-left {
+    0% {
+        min-width: 350px;
+        max-height: 500px;
+        border-bottom-right-radius: 0;
+        background-color: #fff;
+        z-index: 1
+    }
+
+    50% {
+        min-width: 350px;
+        max-height: 50px;
+        border-bottom-right-radius: 20px;
+        background-color: #fff;
+        z-index: 1
+    }
+
+    99% {
+        min-width: 50px;
+        max-height: 50px;
+        border-bottom-right-radius: 20px;
+        background-color: hsla(0,0%,100%,.8);
+        z-index: auto
+    }
+
+    to {
+        min-width: 50px;
+        max-height: 50px;
+        border-bottom-right-radius: 20px;
+        background-color: hsla(0,0%,100%,.8);
+        z-index: auto
+    }
+}
+
+@keyframes close-item-bottom-left-lg {
+    0% {
+        min-width: 350px;
+        max-height: 500px;
+        border-bottom-right-radius: 0;
+        background-color: #fff;
+        z-index: 1
+    }
+
+    50% {
+        min-width: 350px;
+        max-height: 50px;
+        border-bottom-right-radius: 24px;
+        background-color: #fff;
+        z-index: 1
+    }
+
+    99% {
+        min-width: 50px;
+        max-height: 50px;
+        border-bottom-right-radius: 24px;
+        background-color: hsla(0,0%,100%,.8);
+        z-index: auto
+    }
+
+    to {
+        min-width: 50px;
+        max-height: 50px;
+        border-bottom-right-radius: 24px;
+        background-color: hsla(0,0%,100%,.8);
+        z-index: auto
+    }
+}
+
+.clickmap .clickmap-item.bottom-left.animate {
+    animation: close-item-bottom-left 2s forwards
+}
+
+.clickmap .clickmap-item.bottom-left.animate.open {
+    animation: open-item-bottom-left 2s forwards
+}
+
+@media(min-width: 1260px) {
+    .clickmap .clickmap-item.bottom-left.animate.open {
+        animation:open-item-bottom-left-lg 2s forwards
+    }
+}
+
+@keyframes open-item-top-right {
+    0% {
+        min-width: 50px;
+        max-height: 50px;
+        z-index: 1
+    }
+
+    50% {
+        min-width: 350px;
+        max-height: 50px;
+        z-index: 1;
+        border-top-left-radius: 20px
+    }
+
+    to {
+        min-width: 350px;
+        max-height: 500px;
+        z-index: 1;
+        border-top-left-radius: 0
+    }
+}
+
+@keyframes open-item-top-right-lg {
+    0% {
+        min-width: 50px;
+        max-height: 50px;
+        z-index: 1
+    }
+
+    50% {
+        min-width: 350px;
+        max-height: 50px;
+        z-index: 1;
+        border-top-left-radius: 24px
+    }
+
+    to {
+        min-width: 350px;
+        max-height: 500px;
+        z-index: 1;
+        border-top-left-radius: 0
+    }
+}
+
+@keyframes close-item-top-right {
+    0% {
+        min-width: 350px;
+        max-height: 500px;
+        border-top-left-radius: 0;
+        background-color: #fff;
+        z-index: 1
+    }
+
+    50% {
+        min-width: 350px;
+        max-height: 50px;
+        border-top-left-radius: 20px;
+        background-color: #fff;
+        z-index: 1
+    }
+
+    99% {
+        min-width: 50px;
+        max-height: 50px;
+        border-top-left-radius: 20px;
+        background-color: hsla(0,0%,100%,.8);
+        z-index: auto
+    }
+
+    to {
+        min-width: 50px;
+        max-height: 50px;
+        border-top-left-radius: 20px;
+        background-color: hsla(0,0%,100%,.8);
+        z-index: auto
+    }
+}
+
+@keyframes close-item-top-right-lg {
+    0% {
+        min-width: 350px;
+        max-height: 500px;
+        border-top-left-radius: 0;
+        background-color: #fff;
+        z-index: 1
+    }
+
+    50% {
+        min-width: 350px;
+        max-height: 50px;
+        border-top-left-radius: 24px;
+        background-color: #fff;
+        z-index: 1
+    }
+
+    99% {
+        min-width: 50px;
+        max-height: 50px;
+        border-top-left-radius: 24px;
+        background-color: hsla(0,0%,100%,.8);
+        z-index: auto
+    }
+
+    to {
+        min-width: 50px;
+        max-height: 50px;
+        border-top-left-radius: 24px;
+        background-color: hsla(0,0%,100%,.8);
+        z-index: auto
+    }
+}
+
+.clickmap .clickmap-item.top-right.animate {
+    animation: close-item-top-right 2s forwards
+}
+
+.clickmap .clickmap-item.top-right.animate.open {
+    animation: open-item-top-right 2s forwards
+}
+
+@media(min-width: 1260px) {
+    .clickmap .clickmap-item.top-right.animate.open {
+        animation:open-item-top-right-lg 2s forwards
+    }
+}
+
+@keyframes open-item-top-left {
+    0% {
+        min-width: 50px;
+        max-height: 50px;
+        z-index: 1
+    }
+
+    50% {
+        min-width: 350px;
+        max-height: 50px;
+        z-index: 1;
+        border-top-right-radius: 20px
+    }
+
+    to {
+        min-width: 350px;
+        max-height: 500px;
+        z-index: 1;
+        border-top-right-radius: 0
+    }
+}
+
+@keyframes open-item-top-left-lg {
+    0% {
+        min-width: 50px;
+        max-height: 50px;
+        z-index: 1
+    }
+
+    50% {
+        min-width: 350px;
+        max-height: 50px;
+        z-index: 1;
+        border-top-right-radius: 24px
+    }
+
+    to {
+        min-width: 350px;
+        max-height: 500px;
+        z-index: 1;
+        border-top-right-radius: 0
+    }
+}
+
+@keyframes close-item-top-left {
+    0% {
+        min-width: 350px;
+        max-height: 500px;
+        border-top-right-radius: 0;
+        background-color: #fff;
+        z-index: 1
+    }
+
+    50% {
+        min-width: 350px;
+        max-height: 50px;
+        border-top-right-radius: 20px;
+        background-color: #fff;
+        z-index: 1
+    }
+
+    99% {
+        min-width: 50px;
+        max-height: 50px;
+        border-top-right-radius: 20px;
+        background-color: hsla(0,0%,100%,.8);
+        z-index: auto
+    }
+
+    to {
+        min-width: 50px;
+        max-height: 50px;
+        border-top-right-radius: 20px;
+        background-color: hsla(0,0%,100%,.8);
+        z-index: auto
+    }
+}
+
+@keyframes close-item-top-left-lg {
+    0% {
+        min-width: 350px;
+        max-height: 500px;
+        border-top-right-radius: 0;
+        background-color: #fff;
+        z-index: 1
+    }
+
+    50% {
+        min-width: 350px;
+        max-height: 50px;
+        border-top-right-radius: 24px;
+        background-color: #fff;
+        z-index: 1
+    }
+
+    99% {
+        min-width: 50px;
+        max-height: 50px;
+        border-top-right-radius: 24px;
+        background-color: hsla(0,0%,100%,.8);
+        z-index: auto
+    }
+
+    to {
+        min-width: 50px;
+        max-height: 50px;
+        border-top-right-radius: 24px;
+        background-color: hsla(0,0%,100%,.8);
+        z-index: auto
+    }
+}
+
+.clickmap .clickmap-item.top-left.animate {
+    animation: close-item-top-left 2s forwards
+}
+
+.clickmap .clickmap-item.top-left.animate.open {
+    animation: open-item-top-left 2s forwards
+}
+
+@media(min-width: 1260px) {
+    .clickmap .clickmap-item.top-left.animate.open {
+        animation:open-item-top-left-lg 2s forwards
+    }
+}
+
+@keyframes open-inner-content {
+    0% {
+        width: 0;
+        max-height: 0;
+        opacity: 0
+    }
+
+    50% {
+        width: 330px;
+        max-height: 0;
+        opacity: 0
+    }
+
+    to {
+        width: 330px;
+        max-height: 500px;
+        opacity: 1
+    }
+}
+
+@keyframes close-inner-content {
+    0% {
+        width: 330px;
+        max-height: 500px;
+        opacity: 1
+    }
+
+    50% {
+        width: 330px;
+        max-height: 0;
+        opacity: 0
+    }
+
+    to {
+        width: 0;
+        max-height: 0;
+        opacity: 0
+    }
+}
+
+@media (min-width:768px) {
+	
+	.clickmap .clickmap-image {display:inline-block;}
+	.clickmap-description .clickmap-description-visible {display:block;}
+	.clickmap-description .clickmap-description-hidden {display:none;}
+
+}
+/*----CLICKMAP END----*/

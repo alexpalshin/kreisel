@@ -1,0 +1,108 @@
+/*MERKLISTE*/
+.bookmark-list {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #efeeee; }
+
+.bookmark-list .download-list .bookmarker-text-remove {
+  display: block; }
+
+.bookmark-list .download-list .bookmarker-text-add {
+  display: none; }
+
+.bookmark-list .download-list .downloads .downloads-link a .svg-icon-download-link.merkliste {
+  background-color: #FFF;
+  border: 1px solid #009de0;
+  fill: #009de0; }
+
+.bookmark-list .download-list .downloads .downloads-link a:hover .svg-icon-download-link.merkliste {
+  background-color: #009de0;
+  border: 1px solid #009de0;
+  fill: #FFF; }
+
+.reference-list .teaser .iconlink .svg-icon {
+  display: inline-block;
+  fill: #009de0;
+  position: relative;
+  top: 0;
+  left: 2px;
+  margin-right: -15px;
+  width: 16px;
+  height: 16px; }
+
+.reference-list .card-footer a {
+  display: block; }
+
+.reference-list .iconlink::after, .page-list .iconlink::after {
+  content: none; }
+
+.page-list .pagelink {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  padding: 15px 25px;
+  background-color: #FFF;
+  width: 100%; }
+  @media (min-width: 992px) {
+    .page-list .pagelink {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between; } }
+
+.page-list .pagelink a {
+  display: block; }
+
+.page-list .iconlink .svg-icon {
+  display: inline-block;
+  fill: #009de0;
+  position: relative;
+  top: 0;
+  left: 2px;
+  margin-right: -15px;
+  width: 16px;
+  height: 16px; }
+
+.bookmark-list-control {
+  padding: 20px; }
+
+.bookmark-list-control .svg-icon {
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  fill: #009de0; }
+
+.bookmark-list-control .link:not(:last-child) {
+  margin-bottom: 20px; }
+
+@media (min-width: 576px) {
+  .bookmark-list-control .only-mobile {
+    display: none; }
+
+  .bookmark-list-control .link:not(:last-child) {
+    margin-bottom: 0px; } }
+.abo-form h1 {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.abo-form form {
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto; }
+
+.abo-form form input {
+  width: 100%;
+  margin-bottom: 20px; }
+  @media (min-width: 576px) {
+    .abo-form form input {
+      width: 60%;
+      margin-right: 4%;
+      margin-bottom: 20px; } }
+
+.abo-form form button {
+  width: 100%;
+  font-size: 1.125rem;
+  padding: 12px 56px;
+  margin-bottom: 20px; }
+  @media (min-width: 576px) {
+    .abo-form form button {
+      width: auto;
+      margin-bottom: 5px; } }

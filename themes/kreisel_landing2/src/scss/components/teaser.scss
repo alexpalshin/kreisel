@@ -1,0 +1,125 @@
+//---------------------------------------------
+//
+//  Slider Component
+//
+//    1. Imports
+//    2. Component
+//
+//---------------------------------------------
+
+//---------------------------------------------
+// 1. Imports
+//---------------------------------------------
+
+@import "../variables";
+
+//---------------------------------------------
+// 2. Component
+//---------------------------------------------
+
+/*----TEASER----*/
+
+.card {width:100%;}
+.card .teaser-label {position:absolute; top: 10px;right: -4px;background-color: $white;border: 1px solid $brandcolor;color: $brandcolor;padding: 1px 15px;font-size:0.75rem;text-transform: uppercase;}
+.teaser-container .teaser {display:flex;margin: 12px 0 12px 0;}
+.teaser-container .teaser .card {box-shadow: 0 0 20px 0 rgba(0,0,0,.1);border:none;border-radius: 0;position:relative;background-color:$white;}
+.teaser-container .teaser .card.bg-color {background-color:$brandcolor;color:$white;}
+.teaser-container .teaser .card.bg-img {box-shadow: 0 0 20px 0 rgba(0,0,0,.1);border:none;border-radius: 0;position:relative;background-color:transparent;color:$white;z-index: 1;}
+.teaser-container .teaser .card.bg-img .img-container {position:absolute;top:0;left: 0;width: 100%;height: 100%;z-index: -1;}
+.teaser-container .teaser .card.bg-img .img-container img {width: 100%;height: 100%;object-fit: cover;}
+.teaser-container .teaser .card.bg-img .img-container::after {content:"";width: 100%;height: 100%;position: absolute;top: 0;left: 0;background: $bg-brandcolor_80;}
+.teaser-container .teaser .card .card-body {padding: 1.563rem 1.563rem}
+.teaser-container .teaser .card .teaser-mediacontainer {width:100%;height:300px;overflow:hidden;}
+.teaser-container .teaser .card.bg-img .teaser-mediacontainer {width:100%;height:190px;overflow:hidden;}
+.teaser-container .teaser .card .teaser-mediacontainer img {width: 100%;height: 100%;object-fit: cover;}
+.teaser-container .teaser .card .socialmedia {display:flex;margin-top:1.25rem;}
+.teaser-container .teaser .card .socialmedia a.socialmedia-icon {display:flex;width:30px;height:30px;border-radius:100%;justify-content: center;align-items:center;margin-right:10px;transition: border-color .1s,background-color .1s; border:1px solid $brandcolor;background-color:$brandcolor;}
+.teaser-container .teaser .card.bg-color .socialmedia a.socialmedia-icon {display:flex;width:30px;height:30px;border-radius:100%;justify-content: center;align-items:center;margin-right:10px;transition: border-color .1s,background-color .1s; border:1px solid $brandcolor;background-color:$white;}
+.teaser-container .teaser .card.bg-img .socialmedia a.socialmedia-icon {display:flex;width:30px;height:30px;border-radius:100%;justify-content: center;align-items:center;margin-right:10px;transition: border-color .1s,background-color .1s; border:1px solid $brandcolor;background-color:$white;}
+.teaser-container .teaser .card.bg-color .socialmedia a.socialmedia-icon:hover {border-color:$white;background-color:$brandcolor!important;}
+.teaser-container .teaser .card .socialmedia a.socialmedia-icon.facebook {border-color:$facebook;background-color: $facebook;}
+.teaser-container .teaser .card .socialmedia a.socialmedia-icon.whatsapp {border-color:$whatsapp;background-color: $whatsapp;}
+.teaser-container .teaser .card.bg-color .socialmedia a.socialmedia-icon.facebook {border-color:$facebook;background-color: $white;}
+.teaser-container .teaser .card.bg-color .socialmedia a.socialmedia-icon.facebook:hover {border-color:$white;background-color: $facebook!important;}
+.teaser-container .teaser .card.bg-color .socialmedia a.socialmedia-icon.whatsapp {border-color:$whatsapp;background-color: $white;}
+.teaser-container .teaser .card.bg-color .socialmedia a.socialmedia-icon.whatsapp:hover {border-color:$white;background-color: $whatsapp!important;}
+.teaser-container .teaser .card.bg-img .socialmedia a.socialmedia-icon:hover {border-color:$white;background-color:$brandcolor!important;}
+.teaser-container .teaser .card.bg-img .socialmedia a.socialmedia-icon.facebook {border-color:$facebook;background-color: $white;}
+.teaser-container .teaser .card.bg-img .socialmedia a.socialmedia-icon.facebook:hover {border-color:$white;background-color: $facebook!important;}
+.teaser-container .teaser .card.bg-img .socialmedia a.socialmedia-icon.whatsapp {border-color:$whatsapp;background-color: $white;}
+.teaser-container .teaser .card.bg-img .socialmedia a.socialmedia-icon.whatsapp:hover {border-color:$white;background-color: $whatsapp!important;}
+
+@media (min-width:992px) { 
+	.container.reduce .topteaser-container .card .textbox {margin-left:-40px;margin-top:15px;margin-bottom:15px}
+	.container.reduce .topteaser-container .card .col-lg-4.textbox {width:calc(33.33333% + 40px);}
+	}
+@media (min-width:992px) { 
+	.container .topteaser-container .card .textbox {margin-left:-60px;margin-top:15px;margin-bottom:15px}
+	.container .topteaser-container .card .col-lg-4.textbox {width:calc(33.33333% + 60px);}
+	}
+
+.topteaser-container .card {border:none;border-radius: 0;position:relative;background-color:$white;}
+.topteaser-container .card .textbox {background-color:$brandcolor;color:$white;position:relative;}
+.topteaser-container .card .textbox .card-body {padding:1.875rem;}
+.topteaser-container .card .textbox .card-body .topline {color:$white;font-size:0.75rem;text-transform: uppercase;}
+.topteaser-container .card .textbox .card-body .card-title {margin-bottom:1.125rem}
+.topteaser-container .card .textbox .card-body p {font-size:1.25rem}
+.topteaser-container .card .textbox .card-footer .btn {margin-bottom:15px;padding-right:10%;padding-left:10%;}
+.topteaser-container .topteaser-mediacontainer {width:100%;height:100%;overflow:hidden;}
+.topteaser-container .topteaser-mediacontainer img {width: 100%;height: 100%;object-fit: cover;}
+.topteaser-container .card .socialmedia {display:flex;margin-top:1.25rem;}
+.topteaser-container .card a.socialmedia-icon {display:flex;width:30px;height:30px;border-radius:100%;justify-content: center;align-items:center;margin-right:10px;transition: border-color .1s,background-color .1s; border:1px solid $brandcolor;background-color:$white;}
+
+@media (min-width:992px) {
+	.topteaser-container .topteaser-mediacontainer {position:relative;}
+	.topteaser-container .topteaser-mediacontainer img {position:absolute}
+}
+
+
+.topteaser-container .card a.socialmedia-icon {border-color: $white;background-color: $white;}
+.topteaser-container .card a.socialmedia-icon:hover {border-color: $white;background-color: $brandcolor !important;}
+.topteaser-container .card a.socialmedia-icon.facebook:hover {border-color: $white;background-color: $facebook !important;}
+.topteaser-container .card a.socialmedia-icon.whatsapp:hover {border-color: $white;background-color: $whatsapp !important;}
+.topteaser-container .card a.socialmedia-icon svg {width:16px;height:auto;fill:$brandcolor;}
+.topteaser-container .card a.socialmedia-icon:hover svg {width:16px;height:auto;fill:$white;}
+.topteaser-container .card a.socialmedia-icon.facebook svg {width:16px;height:auto;fill:$facebook;}
+.topteaser-container .card a.socialmedia-icon.facebook:hover svg {width:16px;height:auto;fill:$white;}
+.topteaser-container .card a.socialmedia-icon.whatsapp svg {width:16px;height:auto;fill:$whatsapp;}
+.topteaser-container .card a.socialmedia-icon.whatsapp:hover svg {width:16px;height:auto;fill:$white;}
+
+.teaser-container .teaser .card .socialmedia a.socialmedia-icon:hover {background-color:$white!important;}
+.teaser-container .teaser .card .socialmedia a.socialmedia-icon::after {content:none;}
+.topteaser-container .card .socialmedia a.socialmedia-icon::after {content:none;}
+a.socialmedia-icon {padding:0;}
+a.socialmedia-icon svg {width:16px;height:auto;fill:$white;}
+a.socialmedia-icon:hover svg {width:16px;height:auto;fill:$brandcolor;}
+a.socialmedia-icon.facebook:hover svg {width:16px;height:auto;fill:$facebook;}
+a.socialmedia-icon.whatsapp:hover svg {width:16px;height:auto;fill:$whatsapp;}
+.card.bg-color a.socialmedia-icon svg {width:16px;height:auto;fill:$brandcolor;}
+.card.bg-color a.socialmedia-icon:hover svg {width:16px;height:auto;fill:$white;}
+.card.bg-color a.socialmedia-icon.facebook svg {width:16px;height:auto;fill:$facebook;}
+.card.bg-color a.socialmedia-icon.facebook:hover svg {width:16px;height:auto;fill:$white;}
+.card.bg-color a.socialmedia-icon.whatsapp svg {width:16px;height:auto;fill:$whatsapp;}
+.card.bg-color a.socialmedia-icon.whatsapp:hover svg {width:16px;height:auto;fill:$white;}
+
+.card.bg-img a.socialmedia-icon svg {width:16px;height:auto;fill:$brandcolor;}
+.card.bg-img a.socialmedia-icon:hover svg {width:16px;height:auto;fill:$white;}
+.card.bg-img a.socialmedia-icon.facebook svg {width:16px;height:auto;fill:$facebook;}
+.card.bg-img a.socialmedia-icon.facebook:hover svg {width:16px;height:auto;fill:$white;}
+.card.bg-img a.socialmedia-icon.whatsapp svg {width:16px;height:auto;fill:$whatsapp;}
+.card.bg-img a.socialmedia-icon.whatsapp:hover svg {width:16px;height:auto;fill:$white;}
+
+@media (min-width:992px) {
+	a.socialmedia-icon.whatsapp {display:none!important;}
+}
+.card-footer {padding:0 1.563rem 1.563rem;background-color: transparent;border-top: none;}
+
+@media (min-width:768px) {
+	.topteaser-container .card .textbox {
+		
+	
+	}
+	
+}
+
+/*----TEASER END----*/

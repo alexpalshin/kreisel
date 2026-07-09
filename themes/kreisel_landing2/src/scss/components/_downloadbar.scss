@@ -1,0 +1,141 @@
+// Scss Document
+
+.downloads {
+	display:flex;
+	width:100%;
+	padding-top: 15px;
+}
+
+.download-component-container{
+	padding-top: 40px;
+	padding-bottom:10px;
+}
+
+.download-component-container h3{
+	margin-bottom: 25px;
+}
+
+.downloads .downloads-entry{
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
+	margin-bottom: 15px;
+	padding: 15px 25px;
+	background-color: $white;
+	flex-wrap: nowrap;
+	
+	@media (min-width: 768px){
+		flex-direction:row;
+		flex-wrap: wrap;
+	}
+}
+.downloads .downloads-entry > div{
+	display:flex;
+}
+
+.downloads-title{
+	font-weight:500;
+	margin-bottom: 5px;
+	font-size:18px;
+	margin-right:auto;
+	width:100%;
+	flex-wrap: wrap;
+
+	@media screen and (min-width:768px){
+		max-width: 60%;
+		white-space: nowrap;
+		margin-bottom: 20px;
+	}
+	
+	@media screen and (min-width:1440px){
+		max-width:25%;
+		flex-basis:25%;
+		white-space: pre-wrap;
+		margin-bottom:0;
+	}
+}
+
+.downloads-title .downloads-subtitle{
+	font-size:1rem;
+	font-weight:300;
+	margin:0;
+}
+
+.downloads .downloads-file-info{
+	display:flex;
+	justify-content: space-between;
+	margin-right:auto;
+	
+	@media screen and (min-width:768px){
+		margin-left:auto;
+		margin-right:auto;
+		width: 40%;
+		justify-content:flex-start;
+	}
+	
+	@media screen and (min-width:1440px){
+		max-width:15%;
+		justify-content: space-between;
+	}
+	
+}
+
+.downloads .downloads-file-extension{
+	min-width: 60px;
+	text-transform: uppercase;
+}
+
+.downloads .downloads-file-size{
+	margin-bottom: 15px;	
+	
+	@media (min-width: 768px){
+		margin-bottom:0px;
+	}
+	
+	@media (min-width: 1440px){
+		padding-right: 20px;
+	}
+}
+
+.downloads .downloads-link{
+	display:flex;
+	margin-bottom: 12px;
+	
+	@media (min-width: 768px){
+		margin-bottom: 0;
+		margin-right:auto;
+		margin-left:auto;
+	}
+}
+
+.downloads .downloads-link a{
+	padding: 0;
+	display:flex;
+	font-weight: 500;
+}
+
+.downloads .svg-icon-download-link{
+	display:flex;
+	background-color: $brandcolor;
+	border: 1px solid $brandcolor;
+	fill: $white;
+	border-radius:100%;
+	padding:4px;
+	overflow:hidden;
+	width:25px;
+	height:25px;
+	margin-right:10px;
+}
+
+.downloads .downloads-link a:hover .svg-icon-download-link{
+	background-color: $white;
+	fill: $brandcolor;
+}
+
+.bookmarker-text-remove{
+	display:none;
+}
+
+.maincontent .downloads .downloads-link a::after, footer a::after {
+	display:none;
+}

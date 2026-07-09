@@ -1,0 +1,91 @@
+//---------------------------------------------
+//
+//  Slider Component
+//
+//    1. Imports
+//    2. Component
+//
+//---------------------------------------------
+
+//---------------------------------------------
+// 1. Imports
+//---------------------------------------------
+
+@import "../variables";
+
+//---------------------------------------------
+// 2. Component
+//---------------------------------------------
+
+/*----ICONS----*/
+
+.icons-container .icons-box {display:flex;}
+
+.icons-container .icons-box .card {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 0;
+    position: relative;
+    background-color: #FFF;
+	padding:40px 25px 25px;
+}
+
+.icons-container .icons-box .card-body {
+	padding:0;
+	margin-bottom:10px;
+}
+
+.icons-container .icons-box .icons-mediacontainer {
+	width:100%;
+	height:auto;
+	display:flex;
+	justify-content: center;
+	margin-bottom:30px;
+}
+
+.icons-container .icons-box .icons-mediacontainer img {
+	width:50px;
+	height:auto;
+}
+
+.icons-container .card-footer {
+	padding:0 0 0 0;
+}
+
+
+.icons-container .icons-open {display:flex;}
+
+.icons-container .icons-open .card {
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    position: relative;
+    background-color: #FFF;
+	padding:0 12px;
+}
+
+.icons-container .icons-open .icons-mediacontainer {
+	width:100%;
+	height:auto;
+	display:flex;
+	justify-content: center;
+	margin-bottom:5px;
+}
+
+.icons-container .icons-open .iconimage-container {
+	background-color: $brandcolor;
+	display:flex; 
+	justify-content:center;
+	align-items: center;
+	align-self: center;
+	border-radius: 100%;
+	margin-bottom: 5px;
+	width: 55px; 
+	height: 55px;
+	@media (min-width:576px)  {width: 65px; height: 65px; }
+	@media (min-width:1260px) {width: 90px; height: 90px;}
+}
+
+.icons-container .icons-open .iconimage-container img.iconimage {width:60%;}
+
+/*----ICONS END----*/

@@ -1,0 +1,56 @@
+//---------------------------------------------
+//
+//  Slider Component
+//
+//    1. Imports
+//    2. Component
+//
+//---------------------------------------------
+
+//---------------------------------------------
+// 1. Imports
+//---------------------------------------------
+
+@import "../variables";
+
+//---------------------------------------------
+// 2. Component
+//---------------------------------------------
+
+/*NEWSLETTER*/
+
+form.wpcf7-form label.control-label {display:none;}
+form.wpcf7-form {width:100%;max-width:620px;margin:0 auto;margin-bottom:40px;}
+form.wpcf7-form input.text {width:100%;margin-bottom:18px}
+form.wpcf7-form textarea.powermail_textarea {width:100%;margin-bottom:18px;}
+form.wpcf7-form .form-check.form-check-inline {margin-bottom:18px;display: inline-block;}
+
+form.wpcf7-form .form-check .form-check-input {float: none;margin-left: -1.5em;margin-right:10px;display: inline-block;vertical-align: middle;cursor: pointer;}
+form.wpcf7-form .form-check-input {border: 1px solid $brandcolor;}
+form.wpcf7-form .form-check-input:checked {background-color: $brandcolor;border-color: $brandcolor;}
+form.wpcf7-form .form-check-input:focus {box-shadow: none;}
+form.wpcf7-form .form-check.form-check-inline .form-check-label {display: inline-block;vertical-align: middle;}
+
+form.wpcf7-form fieldset.form_fieldset {
+	padding: 0 0 20px;
+	margin: 0 0 20px;
+	border-bottom: 1px solid #ccc;
+	}
+form.wpcf7-form fieldset.form_fieldset:last-of-type {
+	border-bottom:0;
+}
+
+form.wpcf7-form .form_legend {
+font-size: 24px;
+margin-bottom: 12px;
+}
+form.wpcf7-form .powermail_fieldwrap_type_check label.control-label {display:block;}
+form.wpcf7-form .form-check {
+  display: flex;
+}
+form.wpcf7-form .checkbox {
+	position:relative;
+}
+
+
+

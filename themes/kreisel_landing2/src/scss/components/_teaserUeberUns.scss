@@ -1,0 +1,22 @@
+// Scss Document
+
+.teaserUeberUns-component-container{
+	display:flex;
+}
+
+.teaserUeberUns-Bild{
+	margin-bottom: 20px;
+	flex: 1;
+}
+
+.teaserUeberUns-Bild img{
+	margin-right: 2.5em;
+	width:100%;
+}
+
+.teaserUeberUns-text{
+	width:100%;
+	
+	@media screen and (min-width: 992px){
+		font-size: 18px;}
+}
